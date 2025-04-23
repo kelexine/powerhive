@@ -179,7 +179,7 @@ backup_config() {
 # Restore configuration from backup
 restore_config() {
     # List available backups
-    local backups=($(ls -1 "${BACKUP_DIR}/"*.json 2>/dev/null))
+    local backups=$(ls -1 "${BACKUP_DIR}/"*.json 2>/dev/null)
 
     if [ ${#backups[@]} -eq 0 ]; then
         echo -e "${YELLOW}No backups found${NC}"
@@ -557,7 +557,7 @@ show_backup_menu() {
             ;;
         3)
             echo -e "${GOLD}Available Backups:${NC}"
-            local backups=($(ls -1 "${BACKUP_DIR}/"*.json 2>/dev/null))
+            local backups=$(ls -1 "${BACKUP_DIR}/"*.json 2>/dev/null)
 
             if [ ${#backups[@]} -eq 0 ]; then
                 echo -e "${YELLOW}No backups found${NC}"
@@ -592,7 +592,7 @@ show_about() {
     echo -e "${YELLOW}┌──────────────────────────────────────┐${NC}"
     echo -e "${YELLOW}│            ABOUT POWERHIVE           │${NC}"
     echo -e "${YELLOW}└──────────────────────────────────────┘${NC}"
-    echo -e "${GOLD}PowerHive v1.0.0${NC}"
+    echo -e "${GOLD}PowerHive v1.0.1${NC}"
     echo -e "A Magisk module for advanced power management"
     echo -e "and system performance control.\n"
     echo -e "${CYAN}Author:${NC} Kelexine"

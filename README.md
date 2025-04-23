@@ -4,7 +4,7 @@
 
 - **ID:** powerhive
 - **Name:** PowerHive
-- **Version:** v1.0.0
+- **Version:** v1.0.1
 - **Author:** Kelexine
 - **Description:** Advanced power management and system performance control for Android devices via Magisk.
 
